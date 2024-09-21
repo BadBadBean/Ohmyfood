@@ -2,6 +2,7 @@
 $main-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
+$gradient-background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 
 
 /****** General ***********/
@@ -18,7 +19,6 @@ body {
 
 .main-container {
 	width: 100%;
-    max-width: 768px;
 	min-width: 320px;
 }
 
@@ -60,12 +60,20 @@ header {
 		background-color: #EAEAEA;
 		font-size: 16px;
 
+		&:focus {
+			outline: none;
+		}
+
 		&::placeholder {
 			color: #353535;
 			font-size: 16px;
 			font-weight: 500;
 		}
 	}
+}
+
+.location__icon {
+	color: #353535;
 }
 
 /****** Hero ***********/
@@ -97,10 +105,15 @@ header {
 	border-radius: 25px;
 	border: none;
 	color: #fff;
-	background: linear-gradient($secondary-color, $main-color);
+	background: $gradient-background;
+	box-shadow: 0px 4px 10px 0px #00000040;
+	transition:  .5s ease;
+
 
 		&:hover {
 			opacity: 0.8;
+			box-shadow: 0px 4px 15px 0px #00000059;
+			transition:  .5s ease;
 		}
 }
 
@@ -108,6 +121,8 @@ header {
 /****** Presentation ***********/
 .presentation {
 	padding-bottom: 68px;
+	text-align: left;
+  	counter-reset: presentation-number;
 }
 
 .presentation__title {
@@ -116,23 +131,42 @@ header {
 }
 
 .presentation__card {
-	display: flex;
-	justify-content: center;
-	box-shadow: 0px 4px 15px 0px #00000026;
-	font-weight: 500;
-	padding: 28px 0;
-	margin: 25px 33px;
-	border-radius: 20px;
 	position: relative;
+  	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+ 	font-weight: 500;
+  	padding: 28px 0;
+  	margin: 25px 33px;
+  	border-radius: 20px;
+  	display: flex;
+	// justify-content: center;
+  	align-items: center;
+	padding-left: 10%;
 }
 
+.presentation__card::before {
+	counter-increment: presentation-number;
+	content: counter(presentation-number);
+	position: absolute;
+	left: -10px;
+	background-color: #9356DC;
+	color: white;
+	font-size: 14px;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+  }
+
 .presentation__icon {
+	display: flex;
+	justify-content: end;
 	width: 18px;
 	margin-right: 20px;
-	font-size: 16px;
 	color: #7E7E7E;
 
-	&--active {
+	&--purple {
 		color: $main-color;
 	}
 }
@@ -220,11 +254,31 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 14px 25px 13px 13px;
-
-		&.fa-heart {
-			font-size: 21px;
-		}
 }
+
+input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+input[type=checkbox] + label:before {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+input[type=checkbox] + label:before {
+	content: "\f004";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 400;
+
+
+} /* unchecked icon */
+
+input[type=checkbox]:checked + label:before { 
+	content: "\f004";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	background: $gradient-background;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition:  .5s ease;
+} /* checked icon */
 
 /****** Footer ***********/
 footer {

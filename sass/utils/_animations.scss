@@ -1,0 +1,63 @@
+/****** Menu appareance ***********/
+
+.menu__animation {
+	animation-duration: 2s;
+	animation-name: menu-appearence;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes menu-appearence {
+	0% {
+	  opacity: 0;
+	  transform: translate(0, 40px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translate(0, 0);
+	}
+  }
+
+.delay1 {animation-delay: 0.0s; }
+.delay2 {animation-delay: 0.5s; }
+.delay3 {animation-delay: 1.0s; }
+.delay4 {animation-delay: 1.5s; }
+.delay5 {animation-delay: 2.0s; }
+.delay6 {animation-delay: 2.5s; }
+.delay7 {animation-delay: 3.0s; }
+.delay8 {animation-delay: 3.5s; }
+.delay9 {animation-delay: 4.0s; }
+
+
+
+/****** Menu order ***********/
+
+.menu__card::after {
+	content: '\f058';
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	height: 100%;
+	width: 59px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	position: absolute;
+	color: #fff;
+	background-color: #99E2D0;
+	right: 0;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	transform: scaleX(0);
+  	transform-origin: right;
+  	transition: transform .5s ease-in;
+}
+
+.menu__card:hover::after {
+	transform: scaleX(1);
+}
+
+.menu__card:hover{
+	padding-right: 59px;
+	transition: 0.5s ease-in;
+}

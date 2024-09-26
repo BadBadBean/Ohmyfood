@@ -1,0 +1,67 @@
+@mixin gradient-button {
+    display: block;
+	text-align: center;
+	margin: auto;
+	width: 218px;
+	padding: 18px 22px;
+	border-radius: 25px;
+	border: none;
+	background: $gradient-background;
+	box-shadow: 0px 4px 10px 0px #00000040;
+	transition:  .5s ease;
+
+
+		&:hover {
+			opacity: 0.8;
+			box-shadow: 0px 4px 15px 0px #00000059;
+			transition:  .5s ease;
+		}
+}
+
+.go-back {
+	display: flex;
+	position: absolute;
+	left: 23px;
+	color: #353535;
+}
+
+.card__new {
+	display: flex;
+	position: absolute;
+	width: 80px;
+	height: 29px;
+	border-radius: 2px;
+	background-color: #99E2D0;
+	color: #008766;
+	align-items: center;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 500;
+	top: 13px;
+	right: 13px;
+}
+
+input[type=checkbox] {
+	display:none;
+}
+
+input[type=checkbox] + label:before {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+input[type=checkbox] + label:before {
+	content: "\f004";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 400;
+}
+
+input[type=checkbox]:checked + label:before { 
+	content: "\f004";
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	background: $gradient-background;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition:  .5s ease;
+}

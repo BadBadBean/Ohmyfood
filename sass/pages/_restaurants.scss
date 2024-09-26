@@ -1,0 +1,70 @@
+/****** Banner ***********/
+
+.banner {
+	max-height : 383px;
+	width: 100%;
+	object-fit: cover;
+}
+
+/****** Restaurant card***********/
+
+.restaurant {
+	background-color: #F6F6F6;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	margin-top: -50px;
+	padding-bottom: 40px;
+	position: relative;
+	top: 0;
+
+	@media (min-width: 1024px) {
+		margin-inline: 180px;
+		}
+}
+
+.restaurant__header {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	padding-top: 32px;
+}
+
+.fa-heart {
+	position: absolute;
+	right: 41px;
+	bottom: 15px;
+}
+
+.menu__category {
+	margin: 40px 13px;
+}
+
+.restaurant__title {
+	margin-right: 24px;
+}
+
+.menu__title {
+	border-bottom: 3px solid #99E2D0;
+	width: 40px;
+	padding-bottom: 5px;
+}
+
+.menu__card {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin: 10px;
+	border-radius: 20px;
+	box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+	cursor: pointer;
+}
+
+span {
+	display: flex;
+	align-items: flex-end;
+	padding: 15px;
+	font-size: 18px;
+	font-weight: 700;
+	color: #353535;
+}

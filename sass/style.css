@@ -86,11 +86,101 @@
 *,
 *::after,
 *::before {
+/****** Couleurs ***********/
+/****** Menu appareance ***********/
+.menu__animation {
+  animation-duration: 1.5s;
+  animation-name: menu-appearence;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes menu-appearence {
+  0% {
+    opacity: 0;
+    transform: translate(0, 40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.5s;
+}
+
+.delay3 {
+  animation-delay: 1s;
+}
+
+.delay4 {
+  animation-delay: 1.5s;
+}
+
+.delay5 {
+  animation-delay: 2s;
+}
+
+.delay6 {
+  animation-delay: 2.5s;
+}
+
+.delay7 {
+  animation-delay: 3s;
+}
+
+.delay8 {
+  animation-delay: 3.5s;
+}
+
+.delay9 {
+  animation-delay: 4s;
+}
+
+/****** Menu order ***********/
+.menu__card::after {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  height: 100%;
+  width: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: absolute;
+  color: #fff;
+  background-color: #99E2D0;
+  right: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in;
+}
+
+.menu__card:hover::after {
+  transform: scaleX(1);
+}
+
+.menu__card:hover {
+  padding-right: 59px;
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  box-sizing: inherit;
 }
 
+/****** General ***********/
 /****** General ***********/
 body {
   display: flex;
@@ -321,12 +411,67 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: center;
   padding-bottom: 14px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
   z-index: 2;
 }
 
+footer {
+  padding: 25px;
+  background-color: #353535;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    margin-bottom: 0;
+    flex-direction: row-reverse;
+    padding: 64px 60px 31px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__links {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.footer__title {
+  font-family: "Shrikhand";
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  .footer__title {
+    margin-left: 85px;
+  }
+}
+
+.footer__link {
+  display: flex;
+  margin-bottom: 7px;
+}
+@media (min-width: 1024px) {
+  .footer__link {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__link--icon {
+    margin-right: 35px;
+    display: flex;
+  }
+}
+
+.footer__icon {
+  width: 20px;
+  margin-right: 11px;
+}
+
+/****** Location input ***********/
 footer {
   padding: 25px;
   background-color: #353535;
@@ -417,6 +562,7 @@ footer {
 .hero__text {
   text-align: center;
   padding: 39px 0 57px 0;
+  padding: 39px 0 57px 0;
   background-color: #F6F6F6;
 }
 
@@ -429,7 +575,9 @@ footer {
 }
 
 .button {
+.button {
   display: block;
+  text-align: center;
   text-align: center;
   margin: auto;
   width: 218px;
@@ -441,6 +589,7 @@ footer {
   transition: 0.5s ease;
 }
 .button:hover {
+.button:hover {
   opacity: 0.8;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
   transition: 0.5s ease;
@@ -451,6 +600,13 @@ footer {
   padding-bottom: 68px;
   text-align: left;
   counter-reset: presentation-number;
+  max-width: 1440px;
+  margin: auto;
+}
+@media (min-width: 1024px) {
+  .presentation {
+    padding-bottom: 0;
+  }
   max-width: 1440px;
   margin: auto;
 }
@@ -472,6 +628,13 @@ footer {
 
 .presentation__cards {
   width: 100%;
+}
+@media (min-width: 1024px) {
+  .presentation__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    text-wrap: balance;
+  }
 }
 @media (min-width: 1024px) {
   .presentation__cards {
@@ -504,10 +667,18 @@ footer {
     padding: 28px 28px;
   }
 }
+@media (min-width: 1024px) {
+  .presentation__card {
+    white-space: nowrap;
+    margin-right: 0;
+    padding: 28px 28px;
+  }
+}
 @media (min-width: 1279px) {
   .presentation__card {
     white-space: nowrap;
     margin-right: 0;
+    padding: 28px 35px;
     padding: 28px 35px;
   }
 }
@@ -541,6 +712,8 @@ footer {
 .restaurants {
   padding: 54px 18px 48px;
   background-color: #F6F6F6;
+  max-width: 1440px;
+  margin: auto;
   max-width: 1440px;
   margin: auto;
 }
@@ -612,8 +785,24 @@ footer {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+/****** Banner ***********/
+.banner {
+  max-height: 383px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
+/****** Restaurant card***********/
+.restaurant {
+  max-width: 1055px;
+  margin: auto;
+  background-color: #F6F6F6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -50px;
+  padding-bottom: 40px;
+  position: relative;
 /****** Restaurant card***********/
 .restaurant {
   max-width: 1055px;
@@ -628,6 +817,8 @@ footer {
 @media (min-width: 1024px) {
   .restaurant {
     padding: 0 210px 40px 210px;
+  .restaurant {
+    padding: 0 210px 40px 210px;
   }
 }
 
@@ -637,8 +828,18 @@ footer {
   justify-content: center;
   align-items: center;
   padding-top: 32px;
+.restaurant__header {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 32px;
 }
 
+.fa-heart {
+  position: absolute;
+  right: 41px;
+  bottom: 15px;
 .fa-heart {
   position: absolute;
   right: 41px;
@@ -657,10 +858,43 @@ footer {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-bottom: 5px;
+
+.menu__category {
+  margin: 40px 13px;
+}
+
+.restaurant__title {
+  margin-right: 24px;
+}
+
+.menu__title {
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  padding-bottom: 5px;
 }
 
 .menu__card {
+.menu__card {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.menu__description {
+  padding: 13px 15px;
+}
+
+span {
+  padding: 13px 15px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #353535;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;

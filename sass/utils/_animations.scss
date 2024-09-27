@@ -1,7 +1,7 @@
 /****** Menu appareance ***********/
 
 .menu__animation {
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 	animation-name: menu-appearence;
 	animation-fill-mode: both;
 	animation-timing-function: ease-in-out;
@@ -27,7 +27,6 @@
 .delay7 {animation-delay: 3.0s; }
 .delay8 {animation-delay: 3.5s; }
 .delay9 {animation-delay: 4.0s; }
-
 
 
 /****** Menu order ***********/
@@ -59,5 +58,4 @@
 
 .menu__card:hover{
 	padding-right: 59px;
-	transition: 0.5s ease-in;
 }

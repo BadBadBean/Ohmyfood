@@ -9,17 +9,18 @@
 /****** Restaurant card***********/
 
 .restaurant {
+	max-width: 1055px;
+	margin: auto;
 	background-color: #F6F6F6;
 	border-top-left-radius: 40px;
 	border-top-right-radius: 40px;
 	margin-top: -50px;
 	padding-bottom: 40px;
 	position: relative;
-	top: 0;
 
 	@media (min-width: 1024px) {
-		margin-inline: 180px;
-		}
+		padding: 0 210px 40px 210px;
+	}
 }
 
 .restaurant__header {
@@ -53,17 +54,21 @@
 .menu__card {
 	display: flex;
 	justify-content: space-between;
+	align-items: flex-end;
 	position: relative;
 	margin: 10px;
 	border-radius: 20px;
 	box-shadow: 0px 4.01px 15.04px 0px #0000001A;
 	cursor: pointer;
+	transition: 0.5s ease-in;
+}
+
+.menu__description {
+	padding: 13px 15px;
 }
 
 span {
-	display: flex;
-	align-items: flex-end;
-	padding: 15px;
+	padding: 13px 15px;
 	font-size: 18px;
 	font-weight: 700;
 	color: #353535;

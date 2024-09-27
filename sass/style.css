@@ -1,7 +1,7 @@
 /****** Couleurs ***********/
 /****** Menu appareance ***********/
 .menu__animation {
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   animation-name: menu-appearence;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -81,7 +81,6 @@
 
 .menu__card:hover {
   padding-right: 59px;
-  transition: 0.5s ease-in;
 }
 
 *,
@@ -209,6 +208,8 @@ input[type=checkbox] {
 input[type=checkbox] + label:before {
   font-size: 22px;
   cursor: pointer;
+  background-size: 0;
+  transition: background-size 0.5s;
 }
 
 input[type=checkbox] + label:before {
@@ -221,11 +222,11 @@ input[type=checkbox]:checked + label:before {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) no-repeat center;
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: 0.5s ease;
+  background-size: 100%;
 }
 
 .loader {
@@ -614,17 +615,18 @@ footer {
 
 /****** Restaurant card***********/
 .restaurant {
+  max-width: 1055px;
+  margin: auto;
   background-color: #F6F6F6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   margin-top: -50px;
   padding-bottom: 40px;
   position: relative;
-  top: 0;
 }
 @media (min-width: 1024px) {
   .restaurant {
-    margin-inline: 180px;
+    padding: 0 210px 40px 210px;
   }
 }
 
@@ -659,17 +661,21 @@ footer {
 .menu__card {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   position: relative;
   margin: 10px;
   border-radius: 20px;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   cursor: pointer;
+  transition: 0.5s ease-in;
+}
+
+.menu__description {
+  padding: 13px 15px;
 }
 
 span {
-  display: flex;
-  align-items: flex-end;
-  padding: 15px;
+  padding: 13px 15px;
   font-size: 18px;
   font-weight: 700;
   color: #353535;

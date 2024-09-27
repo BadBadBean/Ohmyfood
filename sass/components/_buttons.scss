@@ -48,6 +48,8 @@ input[type=checkbox] {
 input[type=checkbox] + label:before {
   font-size: 22px;
   cursor: pointer;
+  background-size: 0;
+  transition: background-size 0.5s;
 }
 
 input[type=checkbox] + label:before {
@@ -60,8 +62,8 @@ input[type=checkbox]:checked + label:before {
 	content: "\f004";
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
-	background: $gradient-background;
+	background: $gradient-background no-repeat center;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	transition:  .5s ease;
+	background-size: 100%;
 }

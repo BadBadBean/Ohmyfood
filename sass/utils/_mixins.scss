@@ -1,0 +1,21 @@
+/****** Gradient buttons ***********/
+
+@mixin gradient-button {
+    display: block;
+	text-align: center;
+	margin: auto;
+	width: 218px;
+	padding: 18px 22px;
+	border-radius: 25px;
+	border: none;
+	background: $gradient-background;
+	box-shadow: 0px 4px 10px 0px #00000040;
+	transition:  .5s ease;
+
+
+		&:hover {
+			opacity: 0.8;
+			box-shadow: 0px 4px 15px 0px #00000059;
+			transition:  .5s ease;
+		}
+}

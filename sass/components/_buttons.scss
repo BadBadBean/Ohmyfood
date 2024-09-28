@@ -1,22 +1,4 @@
-@mixin gradient-button {
-    display: block;
-	text-align: center;
-	margin: auto;
-	width: 218px;
-	padding: 18px 22px;
-	border-radius: 25px;
-	border: none;
-	background: $gradient-background;
-	box-shadow: 0px 4px 10px 0px #00000040;
-	transition:  .5s ease;
-
-
-		&:hover {
-			opacity: 0.8;
-			box-shadow: 0px 4px 15px 0px #00000059;
-			transition:  .5s ease;
-		}
-}
+/****** Back button ***********/
 
 .go-back {
 	display: flex;
@@ -24,6 +6,8 @@
 	left: 23px;
 	color: #353535;
 }
+
+/****** New button ***********/
 
 .card__new {
 	display: flex;
@@ -41,6 +25,8 @@
 	right: 13px;
 }
 
+/****** Heart-shaped button ***********/
+
 input[type=checkbox] {
 	display:none;
 }
@@ -48,7 +34,6 @@ input[type=checkbox] {
 input[type=checkbox] + label:before {
   font-size: 22px;
   cursor: pointer;
-//   background-position: right;
 }
 
 input[type=checkbox] + label:before {
@@ -61,12 +46,13 @@ input[type=checkbox]:checked + label:before {
 	content: "\f004";
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
-	background: linear-gradient(204deg, rgba(255,255,255,1) 31%, rgba(255,121,218,1) 52%, rgba(147,86,220,1) 96%);
+	background: $heart-background;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-size: 400%;
 	animation: heart-fill 1s ease;
 }
+
 
 @keyframes heart-fill {
 	from {
@@ -74,7 +60,6 @@ input[type=checkbox]:checked + label:before {
 	}
 	to {
 		background-position: left;
-		border-image: linear-gradient(204deg, rgba(255,255,255,1) 31%, rgba(255,121,218,1) 52%, rgba(147,86,220,1) 96%);
-		border-size: 1px;
+		
 	}
 }

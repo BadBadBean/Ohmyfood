@@ -1,10 +1,7 @@
 /****** Menu appareance ***********/
 
 .menu__animation {
-	animation-duration: 1.5s;
-	animation-name: menu-appearence;
-	animation-fill-mode: both;
-	animation-timing-function: ease-in-out;
+	animation: menu-appearence 0.5s ease-in-out both;
 }
 
 @keyframes menu-appearence {

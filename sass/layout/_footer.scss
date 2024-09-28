@@ -34,12 +34,12 @@ footer {
 	@media (min-width: 1024px) {
 		margin-right: 10px;
 	}
-}
 
-.footer__link--icon {
-	@media (min-width: 1024px) {
-		margin-right: 35px;
-		display: flex;
+	&--icon {
+		@media (min-width: 1024px) {
+			margin-right: 35px;
+			display: flex;
+		}
 	}
 }
 

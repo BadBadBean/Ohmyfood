@@ -48,8 +48,7 @@ input[type=checkbox] {
 input[type=checkbox] + label:before {
   font-size: 22px;
   cursor: pointer;
-  background-size: 0;
-  transition: background-size 0.5s;
+//   background-position: right;
 }
 
 input[type=checkbox] + label:before {
@@ -62,8 +61,20 @@ input[type=checkbox]:checked + label:before {
 	content: "\f004";
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
-	background: $gradient-background no-repeat center;
+	background: linear-gradient(204deg, rgba(255,255,255,1) 31%, rgba(255,121,218,1) 52%, rgba(147,86,220,1) 96%);
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	background-size: 100%;
+	background-size: 400%;
+	animation: heart-fill 1s ease;
+}
+
+@keyframes heart-fill {
+	from {
+		background-position: right;
+	}
+	to {
+		background-position: left;
+		border-image: linear-gradient(204deg, rgba(255,255,255,1) 31%, rgba(255,121,218,1) 52%, rgba(147,86,220,1) 96%);
+		border-size: 1px;
+	}
 }

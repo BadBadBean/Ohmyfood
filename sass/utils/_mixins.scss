@@ -19,3 +19,9 @@
 			transition:  .5s ease;
 		}
 }
+
+/****** Box-shadow ***********/
+
+@mixin box-shadow($x-axis: 0, $y-axis: 4px, $blur: 15px, $color: $shadow-color) {
+	box-shadow: $x-axis $y-axis $blur $color;
+}

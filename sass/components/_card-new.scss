@@ -1,0 +1,16 @@
+/****** New ***********/
+
+.card__new {
+	display: flex;
+	position: absolute;
+	width: 80px;
+	height: 29px;
+	border-radius: 2px;
+	background-color: $badge-background;
+	color: $badge-color;
+	align-items: center;
+	justify-content: center;
+	top: 13px;
+	right: 13px;
+	// @include box-shadow($y-axis, 2px, 4px, rgba(0, 0, 0, 0.1));
+}

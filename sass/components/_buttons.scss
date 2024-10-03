@@ -1,3 +1,7 @@
+.button {
+	@include gradient-button;
+}
+
 /****** Back button ***********/
 
 .go-back {

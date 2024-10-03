@@ -85,8 +85,8 @@
   padding-right: 59px;
 }
 
-/****** Gradient buttons ***********/
 /****** Box-shadow ***********/
+/****** Gradient buttons ***********/
 *,
 *::after,
 *::before {
@@ -183,6 +183,24 @@ a {
   color: #fff;
 }
 
+.button {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 218px;
+  padding: 18px 22px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  transition: 0.5s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.button:hover {
+  opacity: 0.8;
+  transition: 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 4px 15px rgba(0, 0, 0, 0.15);
+}
+
 /****** Back button ***********/
 .go-back {
   display: flex;
@@ -240,6 +258,7 @@ input[type=checkbox]:checked + label:before {
   justify-content: center;
   top: 13px;
   right: 13px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /****** Loading screen ***********/
@@ -336,8 +355,7 @@ header {
   align-items: center;
   padding: 14px;
   position: relative;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 footer {
@@ -398,6 +416,7 @@ footer {
   justify-content: center;
   padding: 15px;
   background-color: #EAEAEA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .location__input {
   width: 130px;
@@ -435,24 +454,6 @@ footer {
 }
 .hero__subtitle {
   margin-bottom: 27px;
-}
-
-.button {
-  display: block;
-  text-align: center;
-  margin: auto;
-  width: 218px;
-  padding: 18px 22px;
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  transition: 0.5s ease;
-}
-.button:hover {
-  opacity: 0.8;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
-  transition: 0.5s ease;
 }
 
 /****** Presentation ***********/
@@ -503,6 +504,7 @@ footer {
   display: flex;
   align-items: center;
   background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 @media (min-width: 1024px) {
   .presentation__card {
@@ -585,6 +587,7 @@ footer {
   background-color: #FFF;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 .card__img {
   width: 100%;
@@ -664,7 +667,7 @@ footer {
   position: relative;
   margin: 10px;
   border-radius: 20px;
-  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: 0.5s ease-in;
 }

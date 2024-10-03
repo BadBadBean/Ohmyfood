@@ -12,5 +12,5 @@
 	justify-content: center;
 	top: 13px;
 	right: 13px;
-	// @include box-shadow($y-axis, 2px, 4px, rgba(0, 0, 0, 0.1));
+	@include box-shadow($y-axis: 2px, $blur-radius: 4px);
 }

@@ -140,11 +140,14 @@
 .restaurants {
 	padding: 54px 18px 48px;
 	background-color: $bg-color;
-	max-width: 1440px;
-	margin: auto;
 
 	@media (min-width: 1279px) {
 		padding: 30px 180px;
+	}
+
+	&__details {
+		max-width: 1440px;
+		margin: auto;
 	}
 
 	&__title {
@@ -174,8 +177,7 @@
 .card {
 	position: relative;
 	background-color: #FFF;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
+	border-radius: 15px;
 	@include box-shadow();
 
 	&__img {

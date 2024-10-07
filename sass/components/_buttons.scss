@@ -12,6 +12,9 @@
 }
 
 /****** Heart-shaped button ***********/
+form {
+	z-index: 3;
+}
 
 input[type=checkbox] {
 	display:none;

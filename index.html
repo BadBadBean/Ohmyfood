@@ -6,24 +6,16 @@
     <title>Ohmyfood</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.x/css/all.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/c373fd176e.js"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-    ></script>
+      referrerpolicy="no-referrer"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="sass/style.css" />
   </head>
@@ -91,7 +83,6 @@
           <div class="restaurants__cards">
             
             <article class="card">
-              <a href="palette_du_gout.html">
                 <div class="restaurant__banner">
                   <img
                     class="card__img"
@@ -99,23 +90,21 @@
                     alt="image plat"
                   />
                   <p class="card__new">Nouveau</p>
-                </div>    
-
-                <div class="card__content">
-                  <div class="card__text">
-                    <h3 class="card__title">La palette du goût</h3>
-                    <p class="card__subtitle">Ménilmontant</p>
-                  </div>
-                  <div>
-                    <input id="box1" type="checkbox" />
-                    <label for="box1"></label>
-                  </div>
                 </div>
-              </a>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title"><a href="palette_du_gout.html">La palette du goût</a></h3>
+                  <p class="card__subtitle">Ménilmontant</p>
+                </div>
+                <form>
+                  <input id="box1" type="checkbox" />
+                  <label for="box1"></label>
+                </form>
+              </div>
             </article>
+            
 
             <article class="card">
-              <a href="note_enchantee.html">
                 <div class="restaurant__banner">
                   <img
                     class="card__img card__img--position"
@@ -124,64 +113,58 @@
                   />
                   <p class="card__new">Nouveau</p>
                 </div>
-
-                <div class="card__content">
-                  <div class="card__text">
-                    <h3 class="card__title">La note enchantée</h3>
-                    <p class="card__subtitle">Charonne</p>
-                  </div>
-                  <div>
-                    <input id="box2" type="checkbox" />
-                    <label for="box2"></label>
-                  </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title"><a href="note_enchantee.html">La note enchantée</a></h3>
+                  <p class="card__subtitle">Charonne</p>
                 </div>
-              </a>
+                <form>
+                  <input id="box2" type="checkbox" />
+                  <label for="box2"></label>
+                </form>
+              </div>
             </article>
 
             <article class="card">
-              <a href="a_la_francaise.html">
                 <div class="restaurant__banner">
                   <img
                     class="card__img"
                     src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                     alt="image plat"
                   />
+                  <p class="card__new">Nouveau</p>
                 </div>
-
-                <div class="card__content">
-                  <div class="card__text">
-                    <h3 class="card__title">A la française</h3>
-                    <p class="card__subtitle">Cité Rouge</p>
-                  </div>
-                  <div>
-                    <input id="box3" type="checkbox" />
-                    <label for="box3"></label>
-                  </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title"><a href="a_la_francaise.html">À la française</a></h3>
+                  <p class="card__subtitle">Cité Rouge</p>
                 </div>
-              </a>
+                <form>
+                  <input id="box3" type="checkbox" />
+                  <label for="box3"></label>
+                </form>
+              </div>
             </article>
 
             <article class="card">
-              <a href="delices_des_sens.html">
                 <div class="restaurant__banner">
                   <img
                     class="card__img"
                     src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                     alt="image plat"
                   />
+                  <p class="card__new">Nouveau</p>
                 </div>
-
-                <div class="card__content">
-                  <div class="card__text">
-                    <h3 class="card__title">Le délice des sens</h3>
-                    <p class="card__subtitle">Folie-Méricourt</p>
-                  </div>
-                  <div>
-                    <input id="box4" type="checkbox" />
-                    <label for="box4"></label>
-                  </div>
+              <div class="card__content">
+                <div class="card__text">
+                  <h3 class="card__title"><a href="delices_des_sens.html">Le délice des sens</a></h3>
+                  <p class="card__subtitle">Folie-Méricourt</p>
                 </div>
-              </a>
+                <form>
+                  <input id="box4" type="checkbox" />
+                  <label for="box4"></label>
+                </form>
+              </div>
             </article>
           </div>
           </div>
@@ -201,7 +184,7 @@
             </div>
           </div>
           <div class="footer__link">
-            <a href="#">Mention légales</a>
+            <a href="#">Mentions légales</a>
           </div>
           <div class="footer__link">
             <a href="mailto:contact@ohmyfood.com">Contact</a>

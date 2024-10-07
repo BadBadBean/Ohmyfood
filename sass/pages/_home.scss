@@ -178,7 +178,8 @@
 	position: relative;
 	background-color: #FFF;
 	border-radius: 15px;
-	@include box-shadow();
+	@include box-shadow($shadow-color:rgba(0, 0, 0, 0.1));
+
 
 	&__title a::before {
 		content: "";
@@ -196,6 +197,11 @@
 		border-top-right-radius: 15px;
 
 		&--position {
+			object-position: 50% 61%;
+		}
+
+		@media (min-width: 1024px) {
+			aspect-ratio: 2.5/1;
 			object-position: 50% 61%;
 		}
 	}
